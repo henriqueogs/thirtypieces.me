@@ -159,6 +159,14 @@
   #hero .hero-copy{max-width:none}
 }
 
+.silver-hand{--src:url('../assets/images/silver-hand-3-4.png')}
+.c-01{--src:url('../assets/images/card-escolhido-3-4.png')}
+.c-02{--src:url('../assets/images/card-perfume.png')}
+.c-03{--src:url('../assets/images/card-pao.png')}
+.c-04{--src:url('../assets/images/card-noite.png')}
+.c-05{--src:url('../assets/images/card-beijo.png')}
+.turn-card{--src:url('../assets/images/card-aparte.png')}
+
 #echo .frame::before{background-image:url('../assets/images/echo-judas-16-9.jpg');background-position:center;filter:brightness(.42)}
 @media (max-width:760px){#echo .frame::before{background-image:url('../assets/images/echo-judas-9-16.jpg');background-position:center top}}
 #echo .ask{text-shadow:0 2px 18px rgba(0,0,0,.95),0 0 60px rgba(0,0,0,.72)}
