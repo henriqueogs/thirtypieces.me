@@ -14,6 +14,7 @@ O site é uma peça digital curta, bilíngue e visualmente cinematográfica. A l
 - a virada narrativa;
 - o veredito deixado ao leitor.
 
+
 A direção visual usa uma paleta de noite, osso, prata e vela, com composições inspiradas por chiaroscuro e retratos à maneira de Caravaggio. A interação é deliberadamente simples: scroll, cards clicáveis e alternância de idioma. O resto é silêncio, imagem e texto.
 
 ## Idiomas
