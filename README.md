@@ -99,21 +99,6 @@ Configuração recomendada:
 
 Se o deploy for manual, suba o conteúdo da pasta raiz. A pasta `scripts/` é útil para manutenção, mas não é necessária para servir o site.
 
-## Manutenção editorial
-
-O texto principal em português está no `index.html`; as versões bilíngues usadas na alternância ficam em `js/i18n.js`. Ao alterar uma passagem narrativa, mantenha as duas fontes coerentes.
-
-As imagens usadas pelo CSS ficam mapeadas em `css/styles.css`. Os nomes dos arquivos foram pensados para refletir sua função narrativa:
-
-- `hero-judas-*`;
-- `silver-hand-3-4`;
-- `card-*`;
-- `echo-judas-*`;
-- `hero-background-plate`;
-- `grain`.
-
-Depois de qualquer troca de asset ou caminho, rode os scripts de validação.
-
 ## Notas de acessibilidade
 
 A experiência respeita `prefers-reduced-motion`: quando o visitante pede redução de movimento, as animações pesadas são reduzidas e o corredor de cards passa a se comportar como uma coluna navegável.
