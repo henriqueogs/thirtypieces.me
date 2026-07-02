@@ -14,7 +14,6 @@ O site é uma peça digital curta, bilíngue e visualmente cinematográfica. A l
 - a virada narrativa;
 - o veredito deixado ao leitor.
 
-
 A direção visual usa uma paleta de noite, osso, prata e vela, com composições inspiradas por chiaroscuro e retratos à maneira de Caravaggio. A interação é deliberadamente simples: scroll, cards clicáveis e alternância de idioma. O resto é silêncio, imagem e texto.
 
 ## Idiomas
@@ -99,21 +98,6 @@ Configuração recomendada:
 - **Arquivos necessários:** `index.html`, `css/`, `js/`, `assets/`.
 
 Se o deploy for manual, suba o conteúdo da pasta raiz. A pasta `scripts/` é útil para manutenção, mas não é necessária para servir o site.
-
-## Manutenção editorial
-
-O texto principal em português está no `index.html`; as versões bilíngues usadas na alternância ficam em `js/i18n.js`. Ao alterar uma passagem narrativa, mantenha as duas fontes coerentes.
-
-As imagens usadas pelo CSS ficam mapeadas em `css/styles.css`. Os nomes dos arquivos foram pensados para refletir sua função narrativa:
-
-- `hero-judas-*`;
-- `silver-hand-3-4`;
-- `card-*`;
-- `echo-judas-*`;
-- `hero-background-plate`;
-- `grain`.
-
-Depois de qualquer troca de asset ou caminho, rode os scripts de validação.
 
 ## Notas de acessibilidade
 
