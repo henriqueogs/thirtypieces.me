@@ -121,7 +121,10 @@
     padding:14px 26px;cursor:pointer;transition:all .4s ease}
   .reread:hover{border-color:var(--candle);color:var(--candle)}
   .colophon{position:absolute;bottom:24px;left:0;right:0;z-index:3;text-align:center;
-    font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--bone-faint)}
+    font-family:var(--serif);font-size:clamp(13px,1.4vw,16px);font-style:italic;
+    letter-spacing:.08em;text-transform:none;color:rgba(231,221,200,.32)}
+  .colophon a{color:inherit;text-decoration:none;transition:color .35s ease}
+  .colophon a:hover{color:rgba(192,138,45,.72)}
 
   /* OVERLAY DE DEPOIMENTO */
   #overlay{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;
