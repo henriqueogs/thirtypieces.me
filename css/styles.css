@@ -72,7 +72,7 @@
   .gallery-intro p{color:var(--bone-dim);font-style:italic;font-family:var(--serif);font-size:clamp(1rem,2vw,1.3rem)}
   .corridor{height:100svh;display:flex;align-items:center;overflow:hidden}
   .track{display:flex;gap:clamp(28px,4vw,64px);padding:0 12vw;will-change:transform}
-  .card{position:relative;flex:0 0 auto;width:min(70vw,500px);height:74svh;display:flex;flex-direction:column;
+  .card{position:relative;flex:0 0 auto;width:min(72vw,540px);height:74svh;display:flex;flex-direction:column;
     cursor:pointer;overflow:hidden;transition:transform .4s ease;
     box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(231,221,200,.06)}
   .card:hover{transform:translateY(-8px)}
@@ -130,7 +130,7 @@
   #overlay{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;
     padding:24px;background:rgba(4,3,2,.9);opacity:0;visibility:hidden;transition:opacity .5s ease}
   #overlay.open{opacity:1;visibility:visible}
-  .depo-panel{position:relative;max-width:600px;width:100%;max-height:88svh;overflow-y:auto;
+  .depo-panel{position:relative;max-width:720px;width:100%;max-height:88svh;overflow-y:auto;
     padding:clamp(34px,5vw,60px);background:linear-gradient(160deg,#191209,#0b0806);
     box-shadow:0 40px 120px rgba(0,0,0,.7),0 0 0 1px rgba(192,138,45,.18);
     transform:translateY(24px) scale(.98);transition:transform .5s cubic-bezier(.2,.8,.2,1)}

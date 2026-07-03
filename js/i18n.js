@@ -86,7 +86,7 @@
       more: "toque para o depoimento",
       colophon: "feito por Henrique Guimarães",
       __title: "Trinta moedas",
-      __desc: "A traição contada em primeira pessoa. As trinta moedas, o beijo, a noite — tudo dele. Antes de julgar de novo, escute até o fim. Narrativa interativa no claro-escuro de Caravaggio."
+      __desc: "E se a pessoa mais odiada da história cristã tivesse uma última chance de falar?"
     },
 
     en: {

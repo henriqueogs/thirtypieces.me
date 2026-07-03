@@ -1,238 +1,474 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trinta moedas</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trinta moedas</title>
 
-<meta name="description" content="A traição contada em primeira pessoa. As trinta moedas, o beijo, a noite — tudo dele. Antes de julgar de novo, escute até o fim. Narrativa interativa no claro-escuro de Caravaggio." />
-<meta name="author" content="Henrique de Oliveira Guimarães Santos" />
-<meta name="robots" content="index,follow,max-image-preview:large" />
-<meta name="theme-color" content="#0a0806" />
-<link rel="canonical" href="https://thirtypieces.me/" />
+    <meta
+      name="description"
+      content="E se a pessoa mais odiada da história cristã tivesse uma última chance de falar?"
+    />
+    <meta name="author" content="Henrique de Oliveira Guimarães Santos" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#0a0806" />
+    <link rel="canonical" href="https://thirtypieces.me/" />
 
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Trinta moedas" />
-<meta property="og:title" content="Trinta moedas" />
-<meta property="og:description" content="Uma confissão em primeira pessoa: as trinta moedas, o beijo, a noite. Você já julgou. Agora escute o outro lado." />
-<meta property="og:url" content="https://thirtypieces.me/" />
-<meta property="og:image" content="https://thirtypieces.me/assets/images/hero-background-plate.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Retrato em claro-escuro, estilo Caravaggio." />
-<meta property="og:locale" content="pt_BR" />
-<meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Trinta moedas" />
+    <meta property="og:title" content="Trinta moedas" />
+    <meta
+      property="og:description"
+      content="E se a pessoa mais odiada da história cristã tivesse uma última chance de falar?"
+    />
+    <meta property="og:url" content="https://thirtypieces.me/" />
+    <meta
+      property="og:image"
+      content="https://thirtypieces.me/assets/images/hero-background-plate.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Retrato em claro-escuro, estilo Caravaggio."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Trinta moedas" />
-<meta name="twitter:description" content="Uma confissão em primeira pessoa: as trinta moedas, o beijo, a noite. Você já julgou. Agora escute o outro lado." />
-<meta name="twitter:image" content="https://thirtypieces.me/assets/images/hero-background-plate.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trinta moedas" />
+    <meta
+      name="twitter:description"
+      content="E se a pessoa mais odiada da história cristã tivesse uma última chance de falar?"
+    />
+    <meta
+      name="twitter:image"
+      content="https://thirtypieces.me/assets/images/hero-background-plate.jpg"
+    />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "name": "Trinta moedas",
-  "alternateName": "Thirty Pieces",
-  "url": "https://thirtypieces.me/",
-  "inLanguage": [
-    "pt-BR",
-    "en"
-  ],
-  "genre": [
-    "arte digital",
-    "narrativa interativa",
-    "scrollytelling"
-  ],
-  "description": "A traição contada em primeira pessoa: as trinta moedas, o beijo e a noite, numa experiência interativa de claro-escuro inspirada em Caravaggio. Você já julgou; agora ouça o outro lado.",
-  "about": {
-    "@type": "Person",
-    "name": "Judas Iscariotes",
-    "alternateName": "Judas Iscariot",
-    "sameAs": [
-      "https://pt.wikipedia.org/wiki/Judas_Iscariotes",
-      "https://en.wikipedia.org/wiki/Judas_Iscariot"
-    ]
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Henrique de Oliveira Guimarães Santos",
-    "sameAs": [
-      "https://orcid.org/0009-0008-6606-4302"
-    ]
-  },
-  "keywords": "Judas Iscariotes, trinta moedas de prata, Evangelho de Judas, traição, Caravaggio, narrativa interativa, scrollytelling"
-}
-</script>
-</head>
-<body>
-  <div class="bootcover"></div>
-  <div class="langsel" role="group" aria-label="Idioma / Language">
-    <button data-lang="pt" class="active" aria-pressed="true" aria-label="Português (Brasil)">BR</button>
-    <button data-lang="en" aria-pressed="false" aria-label="English">EN</button>
-  </div>
-  <div class="vignette"></div>
-  <div class="grain"></div>
-
-  <!-- ATO 1 -->
-  <section id="hero">
-    <div class="frame filled" id="hero-frame" data-slot="HERO_JUDAS"></div>
-    <div class="hero-copy">
-      <div class="mark"></div>
-      <h1 data-i18n="hero_h1">Você chegou<br>sabendo<br>quem eu sou.</h1>
-      <p class="impact" data-i18n="hero_impact">Não vim negar. O beijo, a prata, o nome que virou sinônimo de traição: é tudo meu. Só te peço uma coisa antes de fechar a página. Me escuta até o fim. Depois, se ainda quiser me chamar do mesmo jeito, chama.</p>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Trinta moedas",
+        "alternateName": "Thirty Pieces",
+        "url": "https://thirtypieces.me/",
+        "inLanguage": ["pt-BR", "en"],
+        "genre": ["arte digital", "narrativa interativa", "scrollytelling"],
+        "description": "E se a pessoa mais odiada da história cristã tivesse uma última chance de falar?",
+        "about": {
+          "@type": "Person",
+          "name": "Judas Iscariotes",
+          "alternateName": "Judas Iscariot",
+          "sameAs": [
+            "https://pt.wikipedia.org/wiki/Judas_Iscariotes",
+            "https://en.wikipedia.org/wiki/Judas_Iscariot"
+          ]
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Henrique de Oliveira Guimarães Santos",
+          "sameAs": ["https://orcid.org/0009-0008-6606-4302"]
+        },
+        "keywords": "Judas Iscariotes, trinta moedas de prata, Evangelho de Judas, traição, Caravaggio, narrativa interativa, scrollytelling"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bootcover"></div>
+    <div class="langsel" role="group" aria-label="Idioma / Language">
+      <button
+        data-lang="pt"
+        class="active"
+        aria-pressed="true"
+        aria-label="Português (Brasil)"
+      >
+        BR
+      </button>
+      <button data-lang="en" aria-pressed="false" aria-label="English">
+        EN
+      </button>
     </div>
-    <div class="scrollcue"><span data-i18n="scrollcue">descer</span><span class="line"></span></div>
-  </section>
+    <div class="vignette"></div>
+    <div class="grain"></div>
 
-  <!-- ATO 2 -->
-  <section id="silver">
-    <div class="weight-copy">
-      <span class="kicker" data-i18n="silver_kicker">O pedido</span>
-      <h2 data-i18n="silver_h2">Não começou<br>com a prata.</h2>
-      <div class="rule"></div>
-      <p data-i18n="silver_p1">A prata foi a última coisa. Quando ela apareceu, a decisão já tinha peso, forma e caminho. E <strong>não fui eu que desenhei esse caminho.</strong></p>
-      <p data-i18n="silver_p2">Começou antes. Longe da mesa, longe dos outros, quando ele me chamou de lado e me entregou uma tarefa que ninguém deveria receber. Eu volto nisso. Primeiro preciso que você veja o que todo mundo viu, só que do meu lado.</p>
-    </div>
-    <div class="frame filled silver-hand" data-slot="SILVER_HAND"></div>
-  </section>
+    <!-- ATO 1 -->
+    <section id="hero">
+      <div class="frame filled" id="hero-frame" data-slot="HERO_JUDAS"></div>
+      <div class="hero-copy">
+        <div class="mark"></div>
+        <h1 data-i18n="hero_h1">Você chegou<br />sabendo<br />quem eu sou.</h1>
+        <p class="impact" data-i18n="hero_impact">
+          Não vim negar. O beijo, a prata, o nome que virou sinônimo de traição:
+          é tudo meu. Só te peço uma coisa antes de fechar a página. Me escuta
+          até o fim. Depois, se ainda quiser me chamar do mesmo jeito, chama.
+        </p>
+      </div>
+      <div class="scrollcue">
+        <span data-i18n="scrollcue">descer</span><span class="line"></span>
+      </div>
+    </section>
 
-  <!-- ATO 3 -->
-  <section id="gallery">
-    <div class="gallery-intro">
-      <h2 data-i18n="gallery_h2">Escreveram sobre mim</h2>
-      <p data-i18n="gallery_p">Cinco histórias que eu mesmo nunca pude contar:</p>
-    </div>
-    <div class="corridor">
-      <div class="track" id="track">
+    <!-- ATO 2 -->
+    <section id="silver">
+      <div class="weight-copy">
+        <span class="kicker" data-i18n="silver_kicker">O pedido</span>
+        <h2 data-i18n="silver_h2">Não começou<br />com a prata.</h2>
+        <div class="rule"></div>
+        <p data-i18n="silver_p1">
+          A prata foi a última coisa. Quando ela apareceu, a decisão já tinha
+          peso, forma e caminho. E
+          <strong>não fui eu que desenhei esse caminho.</strong>
+        </p>
+        <p data-i18n="silver_p2">
+          Começou antes. Longe da mesa, longe dos outros, quando ele me chamou
+          de lado e me entregou uma tarefa que ninguém deveria receber. Eu volto
+          nisso. Primeiro preciso que você veja o que todo mundo viu, só que do
+          meu lado.
+        </p>
+      </div>
+      <div class="frame filled silver-hand" data-slot="SILVER_HAND"></div>
+    </section>
 
-        <article class="card">
-          <div class="frame filled c-01" data-slot="CARD_ESCOLHIDO"></div>
-          <div class="label"><span class="idx">I</span><h3 data-i18n="c1_title">A confiança</h3>
-            <p class="teaser" data-i18n="c1_teaser">Me deram a bolsa do grupo. Ninguém guarda o dinheiro de quem já desconfia.</p>
-            <p class="more" data-i18n="more">toque para o depoimento</p></div>
-          <div class="deposition"><span class="depo-idx" data-i18n="c1d_idx">Prova I</span><h3 class="depo-title" data-i18n="c1d_title">A confiança</h3>
-            <p data-i18n="c1d_p1">Eu cuidava do dinheiro dos doze. Pensa nisso antes de me chamar de ladrão. Ninguém entrega a bolsa a um homem em quem já não confia. Eles entregaram.</p>
-            <p data-i18n="c1d_p2">Por anos fui eu que comprei o pão, paguei o teto, separei o que sobrava para os pobres. Ninguém contava as moedas atrás de mim.</p>
-            <p data-i18n="c1d_p3">Depois, foi fácil me reduzir à pior coisa que fiz. Mas antes de eu virar explicação para o horror, eu fui alguém a quem se entregavam coisas. Dinheiro. Recados. Silêncios.</p>
-            <p data-i18n="c1d_p4">Talvez tenha sido por isso que, quando veio o pedido maior, ele soube que eu não largaria no chão.</p></div>
-        </article>
+    <!-- ATO 3 -->
+    <section id="gallery">
+      <div class="gallery-intro">
+        <h2 data-i18n="gallery_h2">Escreveram sobre mim</h2>
+        <p data-i18n="gallery_p">
+          Cinco histórias que eu mesmo nunca pude contar:
+        </p>
+      </div>
+      <div class="corridor">
+        <div class="track" id="track">
+          <article class="card">
+            <div class="frame filled c-01" data-slot="CARD_ESCOLHIDO"></div>
+            <div class="label">
+              <span class="idx">I</span>
+              <h3 data-i18n="c1_title">A confiança</h3>
+              <p class="teaser" data-i18n="c1_teaser">
+                Me deram a bolsa do grupo. Ninguém guarda o dinheiro de quem já
+                desconfia.
+              </p>
+              <p class="more" data-i18n="more">toque para o depoimento</p>
+            </div>
+            <div class="deposition">
+              <span class="depo-idx" data-i18n="c1d_idx">Prova I</span>
+              <h3 class="depo-title" data-i18n="c1d_title">A confiança</h3>
+              <p data-i18n="c1d_p1">
+                Eu cuidava do dinheiro dos doze. Pensa nisso antes de me chamar
+                de ladrão. Ninguém entrega a bolsa a um homem em quem já não
+                confia. Eles entregaram.
+              </p>
+              <p data-i18n="c1d_p2">
+                Por anos fui eu que comprei o pão, paguei o teto, separei o que
+                sobrava para os pobres. Ninguém contava as moedas atrás de mim.
+              </p>
+              <p data-i18n="c1d_p3">
+                Depois, foi fácil me reduzir à pior coisa que fiz. Mas antes de
+                eu virar explicação para o horror, eu fui alguém a quem se
+                entregavam coisas. Dinheiro. Recados. Silêncios.
+              </p>
+              <p data-i18n="c1d_p4">
+                Talvez tenha sido por isso que, quando veio o pedido maior, ele
+                soube que eu não largaria no chão.
+              </p>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="frame filled c-02" data-slot="CARD_PERFUME"></div>
-          <div class="label"><span class="idx">II</span><h3 data-i18n="c2_title">O perfume</h3>
-            <p class="teaser" data-i18n="c2_teaser">Reclamei do perfume derramado. Foi essa frase que pregaram em mim.</p>
-            <p class="more" data-i18n="more">toque para o depoimento</p></div>
-          <div class="deposition"><span class="depo-idx" data-i18n="c2d_idx">Prova II</span><h3 class="depo-title" data-i18n="c2d_title">O perfume</h3>
-            <p data-i18n="c2d_p1">Custava quase um ano de trabalho. Trezentos denários, disseram depois, como se alguém naquela casa não tivesse feito a conta em silêncio.</p>
-            <p data-i18n="c2d_p2">Ela quebrou o frasco e derramou tudo nos pés dele. O cheiro tomou a sala inteira: doce, pesado, quase fúnebre.</p>
-            <p data-i18n="c2d_p3">Eu falei. Disse que aquilo podia ter sido vendido, que dava para alimentar muita gente. Talvez fosse piedade. Talvez cálculo. Talvez eu já não soubesse separar uma coisa da outra.</p>
-            <p data-i18n="c2d_p4">Depois fizeram da minha frase uma alma inteira.</p>
-            <p data-i18n="c2d_p5">Só sei que, naquela noite, antes do beijo, eu vi perfume escorrendo como riqueza sobre pés cansados. Não pensei em prata. Pensei em pão.</p></div>
-        </article>
+          <article class="card">
+            <div class="frame filled c-02" data-slot="CARD_PERFUME"></div>
+            <div class="label">
+              <span class="idx">II</span>
+              <h3 data-i18n="c2_title">O perfume</h3>
+              <p class="teaser" data-i18n="c2_teaser">
+                Reclamei do perfume derramado. Foi essa frase que pregaram em
+                mim.
+              </p>
+              <p class="more" data-i18n="more">toque para o depoimento</p>
+            </div>
+            <div class="deposition">
+              <span class="depo-idx" data-i18n="c2d_idx">Prova II</span>
+              <h3 class="depo-title" data-i18n="c2d_title">O perfume</h3>
+              <p data-i18n="c2d_p1">
+                Custava quase um ano de trabalho. Trezentos denários, disseram
+                depois, como se alguém naquela casa não tivesse feito a conta em
+                silêncio.
+              </p>
+              <p data-i18n="c2d_p2">
+                Ela quebrou o frasco e derramou tudo nos pés dele. O cheiro
+                tomou a sala inteira: doce, pesado, quase fúnebre.
+              </p>
+              <p data-i18n="c2d_p3">
+                Eu falei. Disse que aquilo podia ter sido vendido, que dava para
+                alimentar muita gente. Talvez fosse piedade. Talvez cálculo.
+                Talvez eu já não soubesse separar uma coisa da outra.
+              </p>
+              <p data-i18n="c2d_p4">
+                Depois fizeram da minha frase uma alma inteira.
+              </p>
+              <p data-i18n="c2d_p5">
+                Só sei que, naquela noite, antes do beijo, eu vi perfume
+                escorrendo como riqueza sobre pés cansados. Não pensei em prata.
+                Pensei em pão.
+              </p>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="frame filled c-03" data-slot="CARD_PAO"></div>
-          <div class="label"><span class="idx">III</span><h3 data-i18n="c3_title">O pão</h3>
-            <p class="teaser" data-i18n="c3_teaser">Na ceia, ele molhou o pão e me entregou. "Faça logo."</p>
-            <p class="more" data-i18n="more">toque para o depoimento</p></div>
-          <div class="deposition"><span class="depo-idx" data-i18n="c3d_idx">Prova III</span><h3 class="depo-title" data-i18n="c3d_title">O pão</h3>
-            <p data-i18n="c3d_p1">Ele sabia. Antes de qualquer um na mesa, ele já sabia.</p>
-            <p data-i18n="c3d_p2">Mesmo assim, molhou o pão e colocou na minha mão. "O que você tem para fazer, faça logo." Os outros acharam que era recado sobre comida, sobre a bolsa, sobre alguma obrigação pequena.</p>
-            <p data-i18n="c3d_p3">Eu entendi.</p>
-            <p data-i18n="c3d_p4">Aquilo não era recado. Era entrega. Ele colocava nas minhas mãos o começo do fim que dizia precisar atravessar.</p>
-            <p data-i18n="c3d_p5">Não levantei por cobiça. Levantei porque a ordem veio de quem eu tinha seguido até ali.</p>
-            <p data-i18n="c3d_p6">Saí para o escuro com o pão ainda na boca. Ninguém me segurou. Às vezes penso que, se alguém tivesse perguntado para onde eu ia, eu teria ficado.</p></div>
-        </article>
+          <article class="card">
+            <div class="frame filled c-03" data-slot="CARD_PAO"></div>
+            <div class="label">
+              <span class="idx">III</span>
+              <h3 data-i18n="c3_title">O pão</h3>
+              <p class="teaser" data-i18n="c3_teaser">
+                Na ceia, ele molhou o pão e me entregou. "Faça logo."
+              </p>
+              <p class="more" data-i18n="more">toque para o depoimento</p>
+            </div>
+            <div class="deposition">
+              <span class="depo-idx" data-i18n="c3d_idx">Prova III</span>
+              <h3 class="depo-title" data-i18n="c3d_title">O pão</h3>
+              <p data-i18n="c3d_p1">
+                Ele sabia. Antes de qualquer um na mesa, ele já sabia.
+              </p>
+              <p data-i18n="c3d_p2">
+                Mesmo assim, molhou o pão e colocou na minha mão. "O que você
+                tem para fazer, faça logo." Os outros acharam que era recado
+                sobre comida, sobre a bolsa, sobre alguma obrigação pequena.
+              </p>
+              <p data-i18n="c3d_p3">Eu entendi.</p>
+              <p data-i18n="c3d_p4">
+                Aquilo não era recado. Era entrega. Ele colocava nas minhas mãos
+                o começo do fim que dizia precisar atravessar.
+              </p>
+              <p data-i18n="c3d_p5">
+                Não levantei por cobiça. Levantei porque a ordem veio de quem eu
+                tinha seguido até ali.
+              </p>
+              <p data-i18n="c3d_p6">
+                Saí para o escuro com o pão ainda na boca. Ninguém me segurou.
+                Às vezes penso que, se alguém tivesse perguntado para onde eu
+                ia, eu teria ficado.
+              </p>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="frame filled c-04" data-slot="CARD_NOITE"></div>
-          <div class="label"><span class="idx">IV</span><h3 data-i18n="c4_title">A noite</h3>
-            <p class="teaser" data-i18n="c4_teaser">Esperei no jardim com os soldados, sabendo o que ia fazer.</p>
-            <p class="more" data-i18n="more">toque para o depoimento</p></div>
-          <div class="deposition"><span class="depo-idx" data-i18n="c4d_idx">Prova IV</span><h3 class="depo-title" data-i18n="c4d_title">A noite</h3>
-            <p data-i18n="c4d_p1">Fiquei no escuro com homens armados que não conheciam o rosto dele. Eu conhecia. Era para isso que eu servia ali: ser os olhos deles. Tinham cordas, lâminas, ordens, pressa. Mas não tinham o rosto.</p>
-            <p data-i18n="c4d_p2">Sem mim, eram só homens procurando no escuro alguém que eu amava.</p>
-            <p data-i18n="c4d_p3">Tive tempo de desistir. Esse foi o pior castigo: ter tido tempo. Cada segundo era uma porta aberta para eu virar e ir embora. Eu quis. Cada parte de mim quis.</p>
-            <p data-i18n="c4d_p4">Mas fugir não era só me salvar. Era largar no escuro aquilo que ele tinha posto nas minhas mãos. Era fazer falhar a coisa que ele disse que precisava acontecer.</p></div>
-        </article>
+          <article class="card">
+            <div class="frame filled c-04" data-slot="CARD_NOITE"></div>
+            <div class="label">
+              <span class="idx">IV</span>
+              <h3 data-i18n="c4_title">A noite</h3>
+              <p class="teaser" data-i18n="c4_teaser">
+                Esperei no jardim com os soldados, sabendo o que ia fazer.
+              </p>
+              <p class="more" data-i18n="more">toque para o depoimento</p>
+            </div>
+            <div class="deposition">
+              <span class="depo-idx" data-i18n="c4d_idx">Prova IV</span>
+              <h3 class="depo-title" data-i18n="c4d_title">A noite</h3>
+              <p data-i18n="c4d_p1">
+                Fiquei no escuro com homens armados que não conheciam o rosto
+                dele. Eu conhecia. Era para isso que eu servia ali: ser os olhos
+                deles. Tinham cordas, lâminas, ordens, pressa. Mas não tinham o
+                rosto.
+              </p>
+              <p data-i18n="c4d_p2">
+                Sem mim, eram só homens procurando no escuro alguém que eu
+                amava.
+              </p>
+              <p data-i18n="c4d_p3">
+                Tive tempo de desistir. Esse foi o pior castigo: ter tido tempo.
+                Cada segundo era uma porta aberta para eu virar e ir embora. Eu
+                quis. Cada parte de mim quis.
+              </p>
+              <p data-i18n="c4d_p4">
+                Mas fugir não era só me salvar. Era largar no escuro aquilo que
+                ele tinha posto nas minhas mãos. Era fazer falhar a coisa que
+                ele disse que precisava acontecer.
+              </p>
+            </div>
+          </article>
 
-        <article class="card">
-          <div class="frame filled c-05" data-slot="CARD_BEIJO"></div>
-          <div class="label"><span class="idx">V</span><h3 data-i18n="c5_title">O beijo</h3>
-            <p class="teaser" data-i18n="c5_teaser">Um beijo. Era o sinal combinado. A última vez que toquei nele.</p>
-            <p class="more" data-i18n="more">toque para o depoimento</p></div>
-          <div class="deposition"><span class="depo-idx" data-i18n="c5d_idx">Prova V</span><h3 class="depo-title" data-i18n="c5d_title">O beijo</h3>
-            <p data-i18n="c5d_p1">Combinamos que seria um beijo. Eu podia ter apontado. Podia ter dito o nome em voz alta. Podia ter escolhido um gesto sem pele, sem calor, sem memória.</p>
-            <p data-i18n="c5d_p2">Mas foi um beijo.</p>
-            <p data-i18n="c5d_p3">Porque ainda era amor. Porque talvez só o amor obedecesse a um pedido daqueles.</p>
-            <p data-i18n="c5d_p4">Encostei o rosto no dele e senti a barba, o calor, a calma de quem já sabia de tudo. Ele me chamou de amigo. Naquele instante. Com os homens chegando.</p>
-            <p data-i18n="c5d_p5">Carrego esse "amigo" faz dois mil anos.</p>
-            <p data-i18n="c5d_p6">Pesa mais que a prata, mais que a corda, mais que o nome que me deram depois. Eu fiz porque era ele. Porque foi ele que pediu. Porque acreditei que até aquilo precisava caber no amor que eu tinha por ele.</p></div>
-        </article>
+          <article class="card">
+            <div class="frame filled c-05" data-slot="CARD_BEIJO"></div>
+            <div class="label">
+              <span class="idx">V</span>
+              <h3 data-i18n="c5_title">O beijo</h3>
+              <p class="teaser" data-i18n="c5_teaser">
+                Um beijo. Era o sinal combinado. A última vez que toquei nele.
+              </p>
+              <p class="more" data-i18n="more">toque para o depoimento</p>
+            </div>
+            <div class="deposition">
+              <span class="depo-idx" data-i18n="c5d_idx">Prova V</span>
+              <h3 class="depo-title" data-i18n="c5d_title">O beijo</h3>
+              <p data-i18n="c5d_p1">
+                Combinamos que seria um beijo. Eu podia ter apontado. Podia ter
+                dito o nome em voz alta. Podia ter escolhido um gesto sem pele,
+                sem calor, sem memória.
+              </p>
+              <p data-i18n="c5d_p2">Mas foi um beijo.</p>
+              <p data-i18n="c5d_p3">
+                Porque ainda era amor. Porque talvez só o amor obedecesse a um
+                pedido daqueles.
+              </p>
+              <p data-i18n="c5d_p4">
+                Encostei o rosto no dele e senti a barba, o calor, a calma de
+                quem já sabia de tudo. Ele me chamou de amigo. Naquele instante.
+                Com os homens chegando.
+              </p>
+              <p data-i18n="c5d_p5">Carrego esse "amigo" faz dois mil anos.</p>
+              <p data-i18n="c5d_p6">
+                Pesa mais que a prata, mais que a corda, mais que o nome que me
+                deram depois. Eu fiz porque era ele. Porque foi ele que pediu.
+                Porque acreditei que até aquilo precisava caber no amor que eu
+                tinha por ele.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- ATO 4 — A VIRADA -->
+    <section id="turn">
+      <div class="frame filled turn-card" data-slot="CARD_APARTE"></div>
+      <div class="turn-inner">
+        <div class="turn-eyebrow reveal" data-i18n="turn_eyebrow">
+          O que ninguém ouviu
+        </div>
+        <h2 class="reveal" data-i18n="turn_h2">Ele me pediu.</h2>
+        <p class="reveal" data-i18n="turn_p1">
+          Me chamou para longe dos outros, onde ninguém escutava, e me disse o
+          que precisava acontecer. E que era eu quem tinha que fazer.
+        </p>
+        <p class="reveal" data-i18n="turn_p2">
+          Eu disse não.
+          <strong>Você precisa saber que eu disse não.</strong> Implorei para
+          ele escolher outro, qualquer outro. Falei que não tinha tamanho para
+          aquilo, que ia me partir ao meio. Ele me olhou do jeito que só ele
+          olhava, como quem já viu o fim de tudo, e não tirou o pedido.
+        </p>
+        <p class="reveal" data-i18n="turn_p3">
+          Como é que você nega uma coisa a ele? Me diz. O homem que eu tinha
+          largado tudo para seguir, o único que nunca me olhou com o desprezo
+          dos outros. Ele me pediu. Não ao mais forte. Não ao mais amado. A mim.
+        </p>
+        <p class="reveal" data-i18n="turn_p4">
+          E eu entendi, do jeito torto e doente que a gente entende essas
+          coisas, que aquilo era confiança. Que ele estava me entregando a parte
+          que ninguém mais ia conseguir carregar. Não porque eu era melhor.
+          Talvez porque eu já fosse o único capaz de sobreviver alguns passos
+          dentro daquele ódio antes de ser engolido por ele.
+        </p>
+        <p class="reveal" data-i18n="turn_p5">
+          Ele disse que voltaria. Que era necessário. Que havia uma porta
+          estreita demais para todos passarem, e que alguém precisava abri-la
+          pelo lado errado. Eu acreditei, porque amar alguém é fazer a conta
+          absurda de que ele sabe mais que você sobre a dor que está te
+          entregando.
+        </p>
+        <p class="reveal" data-i18n="turn_p6">
+          Então eu fiz. A coisa mais pesada que um homem já carregou, achando
+          que era obediência, rezando que fosse amor.
+        </p>
+        <p class="reveal" data-i18n="turn_p7">
+          E ninguém ouviu ele me pedir. Só eu. É a minha palavra, dois mil anos
+          depois, contra tudo que escreveram. Eu sei como isso soa. Soa como o
+          que um traidor inventaria para conseguir dormir. Tem dias que eu mesmo
+          não sei se estou lembrando ou só tentando me perdoar.
+        </p>
+      </div>
+    </section>
+
+    <!-- ATO 5 — VEREDITO / ANEL -->
+    <section id="echo">
+      <div class="frame filled" id="echo-frame" data-slot="ECHO_JUDAS"></div>
+      <div class="ask">
+        <h2 class="reveal" data-i18n="echo_h2">Mas eu era<br />só um homem.</h2>
+        <div class="body">
+          <p class="reveal" data-i18n="echo_b1">
+            Devolvi a prata. Joguei no chão do templo na frente deles, e nem
+            isso aliviou. Não quiseram de volta. Disseram que era dinheiro de
+            sangue, como se eu não soubesse.
+          </p>
+          <p class="reveal" data-i18n="echo_b2">
+            Eu esperei. Precisa entender que eu esperei. Queria ficar para ver
+            ele voltar e me dizer, na frente de todos, que tinha sido como ele
+            falou. Que aquilo que me destruiu tinha servido para alguma coisa.
+            Que eu não tinha confundido obediência com perdição.
+          </p>
+          <p class="reveal" data-i18n="echo_b3">
+            Mas a manhã não chegava. E o silêncio depois do que eu fiz era
+            grande demais para um homem caber dentro.
+          </p>
+          <p class="reveal" data-i18n="echo_b4">
+            Ele aguentaria. Era mais que um homem. Eu não era. O peso que ele me
+            deu para carregar foi feito para costas que não eram as minhas, e em
+            algum momento daquela noite eu simplesmente não consegui mais ficar
+            de pé debaixo dele.
+          </p>
+          <p class="reveal" data-i18n="echo_b5">
+            Se fosse só ganância, eu teria gastado a prata e seguido em frente.
+            Ganância não mata ninguém de dentro para fora. O que me matou foi
+            maior que dinheiro. Foi ter feito o necessário sem conseguir
+            sobreviver ao necessário.
+          </p>
+        </div>
+        <div class="verdict">
+          <p class="reveal" data-i18n="echo_v1">
+            Agora você ouviu. Não vou te dizer o que eu fui. Eu mesmo não
+            consegui decidir, e tive <em>dois mil anos.</em>
+          </p>
+          <p class="reveal" data-i18n="echo_v2">
+            Você chegou sabendo quem eu sou.
+          </p>
+          <p class="reveal" data-i18n="echo_v3">
+            Sai sabendo o que eu te contei.
+          </p>
+          <p class="reveal" data-i18n="echo_v4">
+            A distância entre as duas coisas é o que você leva daqui.
+          </p>
+        </div>
+        <div class="mark reveal"></div>
+        <button
+          class="reread"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          data-i18n="reread"
+        >
+          ler de novo desde o começo
+        </button>
+      </div>
+      <p class="colophon reveal">
+        <a
+          href="https://www.linkedin.com/in/henriqueogs/"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="colophon"
+          >feito por Henrique Guimarães</a
+        >
+      </p>
+    </section>
+
+    <!-- OVERLAY -->
+    <div id="overlay" role="dialog" aria-modal="true" aria-label="Depoimento">
+      <div class="depo-panel">
+        <button class="depo-close" aria-label="Fechar">&times;</button>
+        <div id="depo-content"></div>
       </div>
     </div>
-  </section>
 
-  <!-- ATO 4 — A VIRADA -->
-  <section id="turn">
-    <div class="frame filled turn-card" data-slot="CARD_APARTE"></div>
-    <div class="turn-inner">
-      <div class="turn-eyebrow reveal" data-i18n="turn_eyebrow">O que ninguém ouviu</div>
-      <h2 class="reveal" data-i18n="turn_h2">Ele me pediu.</h2>
-      <p class="reveal" data-i18n="turn_p1">Me chamou para longe dos outros, onde ninguém escutava, e me disse o que precisava acontecer. E que era eu quem tinha que fazer.</p>
-      <p class="reveal" data-i18n="turn_p2">Eu disse não. <strong>Você precisa saber que eu disse não.</strong> Implorei para ele escolher outro, qualquer outro. Falei que não tinha tamanho para aquilo, que ia me partir ao meio. Ele me olhou do jeito que só ele olhava, como quem já viu o fim de tudo, e não tirou o pedido.</p>
-      <p class="reveal" data-i18n="turn_p3">Como é que você nega uma coisa a ele? Me diz. O homem que eu tinha largado tudo para seguir, o único que nunca me olhou com o desprezo dos outros. Ele me pediu. Não ao mais forte. Não ao mais amado. A mim.</p>
-      <p class="reveal" data-i18n="turn_p4">E eu entendi, do jeito torto e doente que a gente entende essas coisas, que aquilo era confiança. Que ele estava me entregando a parte que ninguém mais ia conseguir carregar. Não porque eu era melhor. Talvez porque eu já fosse o único capaz de sobreviver alguns passos dentro daquele ódio antes de ser engolido por ele.</p>
-      <p class="reveal" data-i18n="turn_p5">Ele disse que voltaria. Que era necessário. Que havia uma porta estreita demais para todos passarem, e que alguém precisava abri-la pelo lado errado. Eu acreditei, porque amar alguém é fazer a conta absurda de que ele sabe mais que você sobre a dor que está te entregando.</p>
-      <p class="reveal" data-i18n="turn_p6">Então eu fiz. A coisa mais pesada que um homem já carregou, achando que era obediência, rezando que fosse amor.</p>
-      <p class="reveal" data-i18n="turn_p7">E ninguém ouviu ele me pedir. Só eu. É a minha palavra, dois mil anos depois, contra tudo que escreveram. Eu sei como isso soa. Soa como o que um traidor inventaria para conseguir dormir. Tem dias que eu mesmo não sei se estou lembrando ou só tentando me perdoar.</p>
-    </div>
-  </section>
-
-  <!-- ATO 5 — VEREDITO / ANEL -->
-  <section id="echo">
-    <div class="frame filled" id="echo-frame" data-slot="ECHO_JUDAS"></div>
-    <div class="ask">
-      <h2 class="reveal" data-i18n="echo_h2">Mas eu era<br>só um homem.</h2>
-      <div class="body">
-        <p class="reveal" data-i18n="echo_b1">Devolvi a prata. Joguei no chão do templo na frente deles, e nem isso aliviou. Não quiseram de volta. Disseram que era dinheiro de sangue, como se eu não soubesse.</p>
-        <p class="reveal" data-i18n="echo_b2">Eu esperei. Precisa entender que eu esperei. Queria ficar para ver ele voltar e me dizer, na frente de todos, que tinha sido como ele falou. Que aquilo que me destruiu tinha servido para alguma coisa. Que eu não tinha confundido obediência com perdição.</p>
-        <p class="reveal" data-i18n="echo_b3">Mas a manhã não chegava. E o silêncio depois do que eu fiz era grande demais para um homem caber dentro.</p>
-        <p class="reveal" data-i18n="echo_b4">Ele aguentaria. Era mais que um homem. Eu não era. O peso que ele me deu para carregar foi feito para costas que não eram as minhas, e em algum momento daquela noite eu simplesmente não consegui mais ficar de pé debaixo dele.</p>
-        <p class="reveal" data-i18n="echo_b5">Se fosse só ganância, eu teria gastado a prata e seguido em frente. Ganância não mata ninguém de dentro para fora. O que me matou foi maior que dinheiro. Foi ter feito o necessário sem conseguir sobreviver ao necessário.</p>
-      </div>
-      <div class="verdict">
-        <p class="reveal" data-i18n="echo_v1">Agora você ouviu. Não vou te dizer o que eu fui. Eu mesmo não consegui decidir, e tive <em>dois mil anos.</em></p>
-        <p class="reveal" data-i18n="echo_v2">Você chegou sabendo quem eu sou.</p>
-        <p class="reveal" data-i18n="echo_v3">Sai sabendo o que eu te contei.</p>
-        <p class="reveal" data-i18n="echo_v4">A distância entre as duas coisas é o que você leva daqui.</p>
-      </div>
-      <div class="mark reveal"></div>
-      <button class="reread" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n="reread">ler de novo desde o começo</button>
-    </div>
-    <p class="colophon reveal"><a href="https://www.linkedin.com/in/henriqueogs/" target="_blank" rel="noopener noreferrer" data-i18n="colophon">feito por Henrique Guimarães</a></p>
-
-  </section>
-
-  <!-- OVERLAY -->
-  <div id="overlay" role="dialog" aria-modal="true" aria-label="Depoimento">
-    <div class="depo-panel">
-      <button class="depo-close" aria-label="Fechar">&times;</button>
-      <div id="depo-content"></div>
-    </div>
-  </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/i18n.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+  </body>
 </html>
