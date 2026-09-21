@@ -1,5 +1,15 @@
 # Trinta moedas / Thirty Pieces
 
+> **English summary:** An art/design piece, not an app — a scrollytelling
+> reinterpretation of a famous historical figure (Judas Iscariot), told in
+> first person to explore narrative voice and visual design rather than
+> feature engineering. Built as a bilingual (pt-BR/en), chiaroscuro-styled
+> single-page experience: GSAP + ScrollTrigger scroll-driven acts, interactive
+> testimonial dialogs, reduced-motion support, no framework, no build step —
+> plain HTML/CSS/JS deployed as a static site. The interesting part is the
+> craft (pacing, typography, motion, accessibility on a vanilla-JS stack), not
+> the stack itself.
+
 Uma narrativa interativa em primeira pessoa sobre Judas Iscariotes, construída como uma experiência de scrollytelling em claro-escuro. O projeto reconta a traição a partir de uma voz íntima, ambígua e confessional: não para absolver, mas para criar distância entre o julgamento herdado e aquilo que se ouve quando alguém finalmente fala.
 
 Publicado em: [https://thirtypieces.me/](https://thirtypieces.me/)
