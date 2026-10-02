@@ -1,6 +1,6 @@
 :root{
     --void:#0a0806; --ink:#15110b;
-    --bone:#e7ddc8; --bone-dim:rgba(231,221,200,.52); --bone-faint:rgba(231,221,200,.16);
+    --bone:#e7ddc8; --bone-dim:rgba(231,221,200,.72); --bone-faint:rgba(231,221,200,.16);
     --candle:#c08a2d; --silver:#9c9584; --oxblood:#5e1916;
     --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
     --sans:"Inter",system-ui,-apple-system,sans-serif;
@@ -17,7 +17,7 @@
     animation:grain 5s steps(4) infinite}
   @keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}
     50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-2%)}100%{transform:translate(0,0)}}
-  .bootcover{position:fixed;inset:0;z-index:120;background:var(--void);pointer-events:none}
+  .bootcover{display:none;position:fixed;inset:0;z-index:120;background:var(--void);pointer-events:none}
 
   .frame{position:relative;overflow:hidden;background:var(--ink)}
   .frame::before{content:"";position:absolute;inset:0;z-index:0;
@@ -162,13 +162,13 @@
   #hero .hero-copy{max-width:none}
 }
 
-.silver-hand{--src:url('../assets/images/silver-hand-3-4.png')}
-.c-01{--src:url('../assets/images/card-escolhido-3-4.png')}
-.c-02{--src:url('../assets/images/card-perfume.png')}
-.c-03{--src:url('../assets/images/card-pao.png')}
-.c-04{--src:url('../assets/images/card-noite.png')}
-.c-05{--src:url('../assets/images/card-beijo.png')}
-.turn-card{--src:url('../assets/images/card-aparte.png')}
+.silver-hand{--src:url('../assets/images/silver-hand-3-4.webp')}
+.c-01{--src:url('../assets/images/card-escolhido-3-4.webp')}
+.c-02{--src:url('../assets/images/card-perfume.webp')}
+.c-03{--src:url('../assets/images/card-pao.webp')}
+.c-04{--src:url('../assets/images/card-noite.webp')}
+.c-05{--src:url('../assets/images/card-beijo.webp')}
+.turn-card{--src:url('../assets/images/card-aparte.webp')}
 
 #echo .frame::before{background-image:url('../assets/images/echo-judas-16-9.jpg');background-position:center;filter:brightness(.42)}
 @media (max-width:760px){#echo .frame::before{background-image:url('../assets/images/echo-judas-9-16.jpg');background-position:center top}}
@@ -178,8 +178,21 @@
 
 .langsel{position:fixed;top:16px;right:16px;z-index:60;display:flex;gap:2px;
   background:rgba(10,8,6,.55);backdrop-filter:blur(8px);border:1px solid var(--bone-faint);padding:3px;border-radius:2px}
-.langsel button{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.16em;
+.langsel a{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.16em;text-decoration:none;
   background:none;border:none;color:var(--bone-dim);cursor:pointer;padding:6px 11px;transition:color .3s,background .3s}
-.langsel button.active{color:#14100c;background:var(--candle)}
-.langsel button:not(.active):hover{color:var(--bone)}
+.langsel a.active{color:#14100c;background:var(--candle)}
+.langsel a:not(.active):hover{color:var(--bone)}
 @media (max-width:760px){.langsel{top:12px;right:12px}}
+
+.work-title{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--candle);margin-bottom:1rem}
+.about-work{position:relative;z-index:52;max-width:760px;margin:auto;padding:64px 24px;line-height:1.8;color:var(--bone-dim)}
+.about-work h2{font-family:var(--serif);font-size:2rem;color:var(--bone);margin-bottom:1rem}
+.about-work p{margin-bottom:1rem}.about-work a{color:var(--bone)}
+a:focus-visible,button:focus-visible,.card:focus-visible{outline:2px solid var(--candle);outline-offset:5px}
+body.static-reading .corridor{height:auto;overflow:visible}
+body.static-reading .track{flex-direction:column;padding:6vh 6vw;align-items:center}
+body.static-reading .card{width:min(90vw,640px);height:auto;overflow:visible;cursor:default}
+body.static-reading .deposition{display:block;padding:24px;font-family:var(--serif);font-size:1.2rem;line-height:1.7}
+body.static-reading .deposition p{margin-bottom:1rem}
+body.static-reading .more{display:none}
+@media(prefers-reduced-motion:reduce){.grain,.scrollcue .line{animation:none}}

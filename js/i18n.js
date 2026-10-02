@@ -179,39 +179,5 @@
     }
   };
 
-  function applyLang(lang){
-    if(!I18N[lang]) lang="pt";
-    try{localStorage.setItem("tp_lang",lang);}catch(e){}
-    document.documentElement.lang = (lang==="en") ? "en" : "pt-BR";
-    if(I18N[lang].__title) document.title = I18N[lang].__title;
-    var __md=document.querySelector('meta[name="description"]'); if(__md && I18N[lang].__desc) __md.setAttribute("content", I18N[lang].__desc);
-    document.querySelectorAll("[data-i18n]").forEach(function(el){
-      const v = I18N[lang][el.getAttribute("data-i18n")];
-      if(v!=null) el.innerHTML = v;
-    });
-    document.querySelectorAll(".langsel button").forEach(function(b){
-      const on = b.dataset.lang===lang;
-      b.classList.toggle("active", on);
-      b.setAttribute("aria-pressed", on?"true":"false");
-    });
-    if(window.ScrollTrigger) ScrollTrigger.refresh();
-  }
-
-  document.querySelectorAll(".langsel button").forEach(function(b){
-    b.addEventListener("click", function(){ applyLang(b.dataset.lang); });
-  });
-
-  function pickLang(){
-    const supported=["pt","en"];
-    try{var saved=localStorage.getItem("tp_lang");if(saved&&supported.indexOf(saved)!==-1)return saved;}catch(e){}
-    const list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||"en"];
-    for(let i=0;i<list.length;i++){
-      const base=(list[i]||"").toLowerCase().slice(0,2);
-      if(supported.indexOf(base)!==-1) return base;
-    }
-    return "en"; // visitante de outro idioma -> inglês (língua franca)
-  }
-
-  window.__setLang = applyLang;
-  applyLang(pickLang());
+  window.__setLang = function(lang) { window.location.href = lang === "en" ? "/en/" : "/"; };
 })();

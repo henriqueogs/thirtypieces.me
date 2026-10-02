@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const html = fs.readFileSync("index.html", "utf8");
+const html = fs.readFileSync("index.html", "utf8") + fs.readFileSync("en/index.html", "utf8");
 const css = fs.readFileSync("css/styles.css", "utf8");
 const refs = [];
 
@@ -16,7 +16,7 @@ for (const match of css.matchAll(/url\(['"]?([^'")]+)['"]?\)/g)) {
 const missing = [];
 for (const ref of refs) {
   const clean = ref.split(/[?#]/)[0];
-  const resolved = path.normalize(clean);
+  const resolved = path.normalize(clean.replace(/^\//, '') + (clean.endsWith('/') ? 'index.html' : ''));
   if (!fs.existsSync(resolved)) missing.push(ref);
 }
 

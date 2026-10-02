@@ -23,7 +23,7 @@ O projeto suporta:
 - português brasileiro (`pt-BR`);
 - inglês (`en`).
 
-A escolha de idioma fica disponível no canto superior direito. O script detecta preferência salva em `localStorage`, depois o idioma do navegador, e usa inglês como fallback para visitantes de outros idiomas.
+A escolha de idioma fica disponível no canto superior direito por links: português em `/` e inglês em `/en/`. As duas versões têm HTML completo, metadados próprios e hreflang. O idioma segue a URL, inclusive sem JavaScript.
 
 ## Estrutura
 
@@ -47,7 +47,7 @@ A escolha de idioma fica disponível no canto superior direito. O script detecta
 
 ## Tecnologia
 
-Este é um site estático puro. Não há etapa obrigatória de build.
+Este é um site estático puro. Para publicar, `node scripts/build-site.cjs` reúne somente os arquivos públicos em `dist/`. Após mudanças no texto, `node scripts/sync-english.cjs` atualiza a versão inglesa usando as traduções existentes.
 
 - HTML, CSS e JavaScript vanilla;
 - GSAP + ScrollTrigger via CDN;
@@ -88,16 +88,16 @@ node scripts/validate-http-static.js
 
 ## Deploy
 
-O projeto pode ser publicado diretamente no Cloudflare Pages como site estático.
+O projeto está publicado como Cloudflare Worker com assets estáticos. Consulte [SEO.md](SEO.md) para os comandos de validação, montagem e publicação.
 
 Configuração recomendada:
 
-- **Build command:** vazio;
-- **Build output directory:** `.` ou `/`;
+- **Build command:** `node scripts/sync-english.cjs && node scripts/build-site.cjs`;
+- **Build output directory:** `dist`;
 - **Root directory:** raiz do repositório;
-- **Arquivos necessários:** `index.html`, `css/`, `js/`, `assets/`.
+- **Arquivos necessários:** conteúdo de `dist/`, incluindo idiomas, robots.txt, sitemap.xml e 404.html.
 
-Se o deploy for manual, suba o conteúdo da pasta raiz. A pasta `scripts/` é útil para manutenção, mas não é necessária para servir o site.
+Se o deploy for manual, publique apenas `dist/`. A pasta `scripts/` e os arquivos administrativos ficam fora da publicação.
 
 ## Notas de acessibilidade
 

@@ -9,11 +9,14 @@ const mime = new Map([
   [".png", "image/png"],
   [".jpg", "image/jpeg"],
   [".svg", "image/svg+xml"],
+  [".webp", "image/webp"],
+  [".xml", "application/xml"],
+  [".txt", "text/plain"],
 ]);
 
 const server = http.createServer((req, res) => {
   const pathname = decodeURIComponent(new URL(req.url, "http://127.0.0.1").pathname);
-  const file = path.join(process.cwd(), pathname === "/" ? "index.html" : pathname.slice(1));
+  const file = path.join(process.cwd(), pathname.endsWith('/') ? pathname.slice(1) + 'index.html' : pathname.slice(1));
   if (!file.startsWith(process.cwd()) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
     res.writeHead(404);
     res.end("not found");
@@ -27,6 +30,11 @@ server.listen(0, "127.0.0.1", async () => {
   const { port } = server.address();
   const urls = [
     "/",
+    "/en/",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/assets/images/social-card.jpg",
+    "/assets/images/card-beijo.webp",
     "/css/styles.css",
     "/js/app.js",
     "/js/i18n.js",

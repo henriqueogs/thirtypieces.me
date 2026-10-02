@@ -2,21 +2,33 @@
   // ── overlay dos depoimentos (independe do GSAP) ──
   const overlay=document.getElementById("overlay");
   const content=document.getElementById("depo-content");
+  let opener;
   function open(card){
     const depo=card.querySelector(".deposition");
     if(!depo) return;
     content.innerHTML=depo.innerHTML;
+    opener=card;
     overlay.classList.add("open");
+    overlay.querySelector(".depo-close").focus();
   }
-  function close(){ overlay.classList.remove("open"); }
-  document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>open(c)));
+  function close(){ overlay.classList.remove("open"); if(opener) opener.focus(); }
+  document.querySelectorAll(".card").forEach(c=>{
+    c.tabIndex=0;
+    c.setAttribute("role","button");
+    c.setAttribute("aria-haspopup","dialog");
+    c.setAttribute("aria-label",c.querySelector(".label h3").textContent);
+    c.addEventListener("click",()=>open(c));
+    c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open(c);}});
+  });
   overlay.addEventListener("click",e=>{
     if(e.target===overlay||e.target.classList.contains("depo-close")) close();
   });
   document.addEventListener("keydown",e=>{ if(e.key==="Escape") close(); });
+  overlay.addEventListener("keydown",e=>{if(e.key==="Tab"){e.preventDefault();overlay.querySelector(".depo-close").focus();}});
 
   // ── animações ──
   if(!window.gsap || !window.ScrollTrigger){
+    document.body.classList.add("static-reading");
     var bc=document.querySelector(".bootcover"); if(bc) bc.style.display="none";
     console.warn("GSAP não carregou."); return;
   }
@@ -46,7 +58,7 @@
   gsap.to(cover,{opacity:0,duration:reduce?.01:1.3,ease:"power2.out",
     onComplete:()=>{ if(cover) cover.style.display="none"; }});
   if(!reduce) gsap.from("#hero-frame",{filter:"blur(22px)",duration:1.6,ease:"power2.out"});
-  gsap.from("#hero .hero-copy > *", Object.assign(bin({y:28,blur:14,duration:1.4,stagger:.18}),{delay:reduce?0:.45}));
+  // Keep the opening text visible immediately for reading and largest-contentful paint.
 
   // textos de todos os blocos
   reveal("#silver .weight-copy > *","top 72%",{stagger:.16});
