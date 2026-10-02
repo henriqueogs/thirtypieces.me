@@ -44,6 +44,8 @@ O sitemap foi enviado e o Google confirmou a submissão. A primeira leitura reto
 
 O teste ao vivo da página `/` confirmou “URL is available to Google” e “Page can be indexed”. As solicitações de indexação de `/` e `/en/` foram aceitas e entraram na fila prioritária. O sitemap foi reenviado uma vez após esses testes, com confirmação de submissão bem-sucedida. Acompanhar a próxima leitura do sitemap, indexação, consultas e Core Web Vitals com dados reais; submissão e testes não comprovam indexação efetiva nem posicionamento.
 
+Atualização posterior em 2 de outubro de 2026: o relatório Sitemaps confirmou **Success**, última leitura nessa data e **2 páginas descobertas**. A inspeção do índice para `/` e `/en/` confirmou **URL is on Google / Page is indexed** nas duas versões. A pendência histórica de leitura descrita acima foi resolvida. Evidências locais: `seo-sitemap-success.png`, `seo-indexed-pt.png` e `seo-indexed-en.png`. Indexação não garante posição ou tráfego.
+
 Referências: https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites e https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap.
 
 Publicação Cloudflare com verificação Google: versão 3bd6ebaa-11d0-4724-b428-1958ff1e4468. Versão anterior ao trabalho para eventual rollback: 7e8efa6b-2a3f-48ff-a3f4-0d0d7a6ef926.
