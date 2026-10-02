@@ -32,6 +32,8 @@ A propriedade URL-prefix `https://thirtypieces.me/` foi cadastrada e verificada 
 
 O sitemap foi enviado e o Google confirmou a submissão. A primeira leitura retornou “Couldn't fetch”; o endpoint público responde HTTP 200 com Content-Type application/xml e XML válido. A leitura pelo Google permanece pendente de confirmação, apesar da submissão aceita.
 
+Às 11:01 de 2 de outubro de 2026 (America/Sao_Paulo), o teste ao vivo do próprio Google para `/sitemap.xml` confirmou “Crawl allowed? Yes” e “Page fetch Successful”. O arquivo está acessível ao Google; o processamento pelo relatório Sitemaps continua pendente. Não foi solicitada indexação do XML. Evidência visual local: `seo-sitemap-live-test.png`.
+
 O teste ao vivo da página `/` confirmou “URL is available to Google” e “Page can be indexed”. As solicitações de indexação de `/` e `/en/` foram aceitas e entraram na fila prioritária. O sitemap foi reenviado uma vez após esses testes, com confirmação de submissão bem-sucedida. Acompanhar a próxima leitura do sitemap, indexação, consultas e Core Web Vitals com dados reais; submissão e testes não comprovam indexação efetiva nem posicionamento.
 
 Referências: https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites e https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap.
