@@ -11,7 +11,15 @@ Implementado e publicado em 2 de outubro de 2026.
 - Leitura integral dos depoimentos sem JavaScript ou sem GSAP; página 404 para URLs inexistentes.
 - Publicação isolada em dist, com cache de uma hora para CSS/JS e um dia para imagens.
 
-## Manutenção
+## Medição adicional de desempenho
+
+Lighthouse 13.5.0, simulação mobile no site publicado, em 2 de outubro de 2026: desempenho de 69 para 92; LCP de 5,5 para 3,0 segundos; FCP de 3,3 para 2,0 segundos; bloqueio total de 130 para 30 ms. Acessibilidade, boas práticas e SEO obtiveram 100 na medição final. CLS passou de 0 para 0,061. São medições de laboratório de execuções individuais, sujeitas a variação; não comprovam resultados em dispositivos reais nem posição no Google.
+
+As fontes passaram a ser locais, com preload da fonte principal e licenças preservadas. O JavaScript de traduções deixou de ser carregado pelo navegador, pois ambos os idiomas já têm HTML completo. As oito ilustrações de conteúdo agora usam imagens com carregamento sob demanda, mantendo a composição visual. Fontes têm cache de um ano. Playwright validou os dois idiomas, decodificação das oito imagens, teclado, troca de idioma e leitura sem JavaScript ou sem o CDN de animação.
+
+Relatórios locais: `seo-lighthouse-before.json` e `seo-lighthouse-final.json` (ignorados pelo Git). Publicação final: `62c5e488-067d-4d4a-83ae-f56b60291118`.
+
+## Rotina de manutenção
 
 Após editar a versão em português ou as traduções em js/i18n.js:
 

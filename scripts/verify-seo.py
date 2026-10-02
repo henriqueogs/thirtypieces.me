@@ -15,21 +15,38 @@ with sync_playwright() as p:
         page.on('pageerror', lambda error: errors.append(str(error)))
         assert page.goto(base + route).status == 200
         page.wait_for_load_state('networkidle')
+        assert page.evaluate('document.fonts.check(\'500 20px "Cormorant Garamond"\')')
+        assert page.locator('link[href*="fonts.googleapis.com"]').count() == 0
+        assert page.locator('script[src="/js/i18n.js"]').count() == 0
         assert page.locator('html').get_attribute('lang') == lang
         assert page.locator('link[rel=canonical]').get_attribute('href') == 'https://thirtypieces.me' + route
         assert len(json.loads(page.locator('script[type="application/ld+json"]').text_content())) > 5
         assert page.locator('h1').count() == 1
         assert page.locator('footer.about-work').count() == 1
         assert page.locator('main#story').count() == 1
+        assert page.locator('img.art-image[loading="lazy"]').count() == 8
+        for illustration in page.locator('img.art-image').all():
+            illustration.scroll_into_view_if_needed()
+            illustration.evaluate('(image) => image.decode()')
+            assert illustration.evaluate('(image) => image.naturalWidth > 0')
         page.locator('.card').first.focus()
         page.keyboard.press('Enter')
         assert page.locator('#overlay').is_visible()
         page.keyboard.press('Escape')
         assert not page.locator('#overlay').is_visible()
+        page.locator('.card').first.screenshot(path=str(root / ('seo-gallery-' + lang + '.png')))
         assert not errors, errors
         page.goto(base + route)
         page.wait_for_load_state('networkidle')
         page.screenshot(path=str(root / ('seo-' + lang + '-mobile.png')))
+        context.close()
+        context = browser.new_context()
+        page = context.new_page()
+        page.route('**/cdnjs.cloudflare.com/**', lambda route: route.abort())
+        page.goto(base + route)
+        page.wait_for_load_state('networkidle')
+        assert page.locator('body.static-reading').count() == 1
+        assert page.locator('.deposition').first.is_visible()
         context.close()
         context = browser.new_context(java_script_enabled=False)
         page = context.new_page()

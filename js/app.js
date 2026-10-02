@@ -16,7 +16,6 @@
     c.tabIndex=0;
     c.setAttribute("role","button");
     c.setAttribute("aria-haspopup","dialog");
-    c.setAttribute("aria-label",c.querySelector(".label h3").textContent);
     c.addEventListener("click",()=>open(c));
     c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open(c);}});
   });

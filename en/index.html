@@ -56,12 +56,7 @@
       content="https://thirtypieces.me/assets/images/social-card.jpg"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorant-normal-latin.woff2" crossorigin />
 
     <link rel="stylesheet" href="/css/styles.css" />
 
@@ -132,7 +127,7 @@
         <p data-i18n="silver_p1">The silver came last. By the time it appeared, the decision already had weight, shape, and a path. And <strong>I was not the one who drew that path.</strong></p>
         <p data-i18n="silver_p2">It began earlier. Away from the table, away from the others, when he took me aside and handed me a task no one should ever receive. I will come back to that. First I need you to see what everyone saw, only from my side.</p>
       </div>
-      <div class="frame filled silver-hand" data-slot="SILVER_HAND"></div>
+      <div class="frame filled silver-hand image-frame" data-slot="SILVER_HAND"><img class="art-image" src="/assets/images/silver-hand-3-4.webp" alt="" loading="lazy" decoding="async" /></div>
     </section>
 
     <!-- ATO 3 -->
@@ -144,7 +139,7 @@
       <div class="corridor">
         <div class="track" id="track">
           <article class="card">
-            <div class="frame filled c-01" data-slot="CARD_ESCOLHIDO"></div>
+            <div class="frame filled c-01 image-frame" data-slot="CARD_ESCOLHIDO"><img class="art-image" src="/assets/images/card-escolhido-3-4.webp" alt="" loading="lazy" decoding="async" /></div>
             <div class="label">
               <span class="idx">I</span>
               <h3 data-i18n="c1_title">The trust</h3>
@@ -162,7 +157,7 @@
           </article>
 
           <article class="card">
-            <div class="frame filled c-02" data-slot="CARD_PERFUME"></div>
+            <div class="frame filled c-02 image-frame" data-slot="CARD_PERFUME"><img class="art-image" src="/assets/images/card-perfume.webp" alt="" loading="lazy" decoding="async" /></div>
             <div class="label">
               <span class="idx">II</span>
               <h3 data-i18n="c2_title">The perfume</h3>
@@ -181,7 +176,7 @@
           </article>
 
           <article class="card">
-            <div class="frame filled c-03" data-slot="CARD_PAO"></div>
+            <div class="frame filled c-03 image-frame" data-slot="CARD_PAO"><img class="art-image" src="/assets/images/card-pao.webp" alt="" loading="lazy" decoding="async" /></div>
             <div class="label">
               <span class="idx">III</span>
               <h3 data-i18n="c3_title">The bread</h3>
@@ -201,7 +196,7 @@
           </article>
 
           <article class="card">
-            <div class="frame filled c-04" data-slot="CARD_NOITE"></div>
+            <div class="frame filled c-04 image-frame" data-slot="CARD_NOITE"><img class="art-image" src="/assets/images/card-noite.webp" alt="" loading="lazy" decoding="async" /></div>
             <div class="label">
               <span class="idx">IV</span>
               <h3 data-i18n="c4_title">The night</h3>
@@ -219,7 +214,7 @@
           </article>
 
           <article class="card">
-            <div class="frame filled c-05" data-slot="CARD_BEIJO"></div>
+            <div class="frame filled c-05 image-frame" data-slot="CARD_BEIJO"><img class="art-image" src="/assets/images/card-beijo.webp" alt="" loading="lazy" decoding="async" /></div>
             <div class="label">
               <span class="idx">V</span>
               <h3 data-i18n="c5_title">The kiss</h3>
@@ -243,7 +238,7 @@
 
     <!-- ATO 4 — A VIRADA -->
     <section id="turn">
-      <div class="frame filled turn-card" data-slot="CARD_APARTE"></div>
+      <div class="frame filled turn-card image-frame" data-slot="CARD_APARTE"><img class="art-image" src="/assets/images/card-aparte.webp" alt="" loading="lazy" decoding="async" /></div>
       <div class="turn-inner">
         <div class="turn-eyebrow reveal" data-i18n="turn_eyebrow">What no one heard</div>
         <h2 class="reveal" data-i18n="turn_h2">He asked me.</h2>
@@ -259,7 +254,7 @@
 
     <!-- ATO 5 — VEREDITO / ANEL -->
     <section id="echo">
-      <div class="frame filled" id="echo-frame" data-slot="ECHO_JUDAS"></div>
+      <div class="frame filled image-frame" id="echo-frame" data-slot="ECHO_JUDAS"><picture><source media="(max-width:760px)" srcset="/assets/images/echo-judas-9-16.jpg" /><img class="art-image" src="/assets/images/echo-judas-16-9.jpg" alt="" loading="lazy" decoding="async" /></picture></div>
       <div class="ask">
         <h2 class="reveal" data-i18n="echo_h2">But I was<br>only a man.</h2>
         <div class="body">
@@ -306,6 +301,5 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="/js/app.js"></script>
-    <script defer src="/js/i18n.js"></script>
   </body>
 </html>

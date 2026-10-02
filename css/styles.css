@@ -1,3 +1,6 @@
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300 700;font-display:swap;src:url('../assets/fonts/cormorant-normal-latin.woff2') format('woff2')}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300 700;font-display:swap;src:url('../assets/fonts/cormorant-italic-latin.woff2') format('woff2')}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url('../assets/fonts/inter-latin.woff2') format('woff2')}
 :root{
     --void:#0a0806; --ink:#15110b;
     --bone:#e7ddc8; --bone-dim:rgba(231,221,200,.72); --bone-faint:rgba(231,221,200,.16);
@@ -185,6 +188,12 @@
 @media (max-width:760px){.langsel{top:12px;right:12px}}
 
 .work-title{font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--candle);margin-bottom:1rem}
+.frame.image-frame::before{background-image:none}
+.frame .art-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+#turn .frame .art-image{filter:brightness(.4)}
+#echo .frame.image-frame::before{background-image:none}
+#echo .frame .art-image{filter:brightness(.42)}
+@media(max-width:760px){#echo .frame .art-image{object-position:center top}}
 .about-work{position:relative;z-index:52;max-width:760px;margin:auto;padding:64px 24px;line-height:1.8;color:var(--bone-dim)}
 .about-work h2{font-family:var(--serif);font-size:2rem;color:var(--bone);margin-bottom:1rem}
 .about-work p{margin-bottom:1rem}.about-work a{color:var(--bone)}
